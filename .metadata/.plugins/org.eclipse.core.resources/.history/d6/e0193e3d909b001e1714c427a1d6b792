@@ -1,0 +1,46 @@
+//Here it is not necessary that child1 only enters first but it can be any child but it will finish everything then only other threads will enter- synchronization in mUltithreading
+//Here I dont have any pblm for all the thrasds entering to the parking lot but its not possile to start driving the car at a time so I having synchronized work only for a
+//particular block
+class car implements Runnable{
+	 public void run() {
+		try {
+			System.out.println(Thread.currentThread().getName() +" "+"Enter the parking lot");
+			Thread.sleep(3000);
+synchronized(this)
+			{
+			System.out.println(Thread.currentThread().getName() +" "+"has entered the car");
+			Thread.sleep(3000);
+			
+			System.out.println(Thread.currentThread().getName() +" "+"has started to drive the car");
+			Thread.sleep(3000);
+			System.out.println(Thread.currentThread().getName() +" "+"reached the palce");
+			
+			}
+		}
+		catch(Exception e) {
+			System.out.println("some prnlm");
+		}
+		
+	}
+	
+	
+	
+}
+public class Multi9 {
+
+	public static void main(String[] args) {
+		car c=new car();
+		Thread t=new Thread(c);
+		Thread t2=new Thread(c);
+		Thread t3=new Thread(c);
+		t.setName("child1");
+		t2.setName("child2");
+		t3.setName("child3");
+		t.start();
+		t2.start();
+		t3.start();
+		
+
+	}
+
+}

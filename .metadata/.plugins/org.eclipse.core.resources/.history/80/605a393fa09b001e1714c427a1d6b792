@@ -1,0 +1,50 @@
+//Lets explore daemon thread
+class wordpad extends Thread{
+	
+	public void run() {
+		
+		
+	}
+	public void typing() {
+		try {
+		for(int i=0;i<3;i++) {
+			System.out.println("Typing....");
+		}
+		}
+		catch(Exception e) {
+			System.out.println("some pblm");
+		}
+		
+	}
+	public void spellcheck() {
+		try {
+		for(int i=0;i<3;i++) {
+			System.out.println("specllcheck....");
+		}
+		}
+		catch(Exception e) {
+			System.out.println("some pblm");
+		}
+		
+	}
+	public void saving() {
+		try {
+		for(int i=0;i<3;i++) {
+			System.out.println("saving....");
+		}
+		}
+		catch(Exception e) {
+			System.out.println("some pblm");
+		}
+		
+	}
+	
+}
+public class Multi13daemon {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

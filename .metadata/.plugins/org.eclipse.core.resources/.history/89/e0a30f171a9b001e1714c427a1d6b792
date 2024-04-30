@@ -1,0 +1,31 @@
+//Here the task is I have to create 5 threads and those 5 threads should execute only one run method 
+class Multitask implements Runnable{
+	
+	public void run() {
+		//Getting name of the thread
+		String name=Thread.currentThread().getName();
+		
+	}
+}
+public class Multi7 {
+
+	public static void main(String[] args) 
+	{
+		Multitask m1=new Multitask();
+		//Creating a thread object
+		Thread t1=new Thread(m1);
+		Thread t2=new Thread(m1);
+		Thread t3=new Thread(m1);
+		
+		//Lets set the name of thread
+		
+		t1.setName("Bank");
+		t2.setName("Bank2");
+		t3.setName("Bank3");
+		 //Next starting the thread
+		t1.start();
+		t2.start();t3.start();
+		
+	}
+
+}

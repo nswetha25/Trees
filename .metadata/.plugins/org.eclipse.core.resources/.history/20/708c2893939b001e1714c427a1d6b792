@@ -1,0 +1,13 @@
+class Library implements Runnable{
+	public void run() {
+		
+	}
+}
+public class Multi11deadlock {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

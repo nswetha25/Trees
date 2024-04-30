@@ -1,0 +1,18 @@
+//Generally we should not interrupt a thread while it is in running state but if we want we can only do that if it is in sleep or waiting stage
+class Example implements Runnable{
+	
+	public void run() {
+		for(int i=0;i<4;i++) {
+			System.out.println("focus is the key");
+		}
+		
+	}
+}
+public class Multi10 {
+
+	public static void main(String[] args) {
+		Exam
+
+	}
+
+}

@@ -1,0 +1,72 @@
+//Lets explore daemon thread
+class wordpad extends Thread{
+	
+	public void run() {
+		String tname=Thread.currentThread().getName();
+		if("Type".equals(tname)) {
+			typing();
+		}
+		else if("check".equals(tname)) {
+			spellcheck();
+		}
+		else {
+			saving();
+		}
+		
+		
+		
+	}
+	public void typing() {
+		try {
+		for(int i=0;i<3;i++) {
+			System.out.println("Typing....");
+			Thread.sleep(3000);
+		}
+		}
+		catch(Exception e) {
+			System.out.println("some pblm");
+		}
+		
+	}
+	public void spellcheck() {
+		try {
+		for(int i=0;i<3;i++) {
+			System.out.println("specllcheck....");
+			Thread.sleep(3000);
+		}
+		}
+		catch(Exception e) {
+			System.out.println("some pblm");
+		}
+		
+	}
+	public void saving() {
+		try {
+		for(int i=0;i<3;i++) {
+			System.out.println("saving....");
+			Thread.sleep(3000);
+		}
+		}
+		catch(Exception e) {
+			System.out.println("some pblm");
+		}
+		
+	}
+	
+}
+public class Multi13daemon {
+
+	public static void main(String[] args) {
+		wordpad wp=new wordpad();
+		wordpad wp2=new wordpad();
+		wordpad wp3=new wordpad();
+		wp.setName("Type");
+		wp2.setName("check");
+		wp3.setName("saving");
+		wp.start();
+		wp2.start();
+		wp3.start();
+
+	}
+
+}

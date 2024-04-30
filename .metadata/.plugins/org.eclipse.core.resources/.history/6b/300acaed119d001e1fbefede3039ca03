@@ -1,0 +1,30 @@
+package com.telusko.Learning;
+
+import java.util.TreeSet;
+
+public class LaunchTreeset {
+
+	public static void main(String[] args) {
+		//Indexed based operation is not allowed
+		TreeSet ts=new TreeSet();//Behidn the scenes binary search tree is followed. So we are getting everything in sorted order (Ascending)
+		ts.add(100);
+		ts.add(200);
+		ts.add(50);
+		ts.add(150);
+		ts.add(25);
+		ts.add(75);
+		ts.add(75);//Duplicates are not allowed. it is storing only once
+		ts.add(125);
+		
+		System.out.println(ts.ceiling(200));
+		System.out.println(ts.ceiling(65));//if the value is not present it gives the highest next value present which is 75
+		System.out.println(ts.higher(65));//75-- so waht is the difference see below
+		
+		System.out.println(ts.ceiling(75));
+		System.out.println(ts.ceiling(75));
+		
+		System.out.println(ts);
+
+	}
+
+}

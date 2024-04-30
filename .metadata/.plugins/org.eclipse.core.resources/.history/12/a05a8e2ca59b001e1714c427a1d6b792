@@ -1,0 +1,34 @@
+
+class Producer extends Thread{
+	public void run() {
+		//Lets generate data
+		int i;
+		
+	}
+	
+}
+class Consumer extends Thread{
+	public void run() {
+		
+	}
+	
+}
+class Queue{
+	int x;
+	public void put(int data) {
+		x=data;
+		System.out.println("I hav eput the data in to x :"+x);
+		
+	}
+	
+}
+public class prodconspblm {
+
+	public static void main(String[] args) {
+		Producer p=new Producer();
+		Consumer c=new Consumer();
+		
+
+	}
+
+}

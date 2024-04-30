@@ -1,0 +1,27 @@
+<!-- No need for the DTD declaration in modern Hibernate versions -->
+<!-- <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"> -->
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- SQL dialect to inform Hibernate to generate the query specific to the database engine -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- To inform Hibernate about the database details -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/studentinfo</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property> <!-- Updated with your actual MySQL password -->
+
+        <!-- To inform Hibernate to display the query generated during execution -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- To inform Hibernate to display the formatted style query generated during execution -->
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Consider using "update" or "validate" in production -->
+        <property name="hibernate.hbm2ddl.auto">update</property> <!-- IF I USE CREATE it will drop and create new one but if i dont want to drop then use update -->
+
+        <!-- Specifying mapping information -->
+        <mapping class="com.example.entity3.Student"/>
+    </session-factory>
+</hibernate-configuration>

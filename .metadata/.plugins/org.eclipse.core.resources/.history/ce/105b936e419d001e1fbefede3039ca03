@@ -1,0 +1,13 @@
+package com.telusko.Learning;
+
+import java.util.HashSet;
+
+public class LaunchHashSet {
+
+	public static void main(String[] args) {
+		
+		HashSet hs=new HashSet();
+
+	}
+
+}

@@ -1,0 +1,73 @@
+//Here this will enter in to deadlock because lets say if student1 gets the opportuntiy and he locks the java but while the studen1 thread is sleeping then student 2 comes and he will
+//come to acquire res3 so now res1 is in locked and res3 is in locksed . Now again student 1 comes and he will lock res2 now student 2 comes he wil ask for res2 and goes to
+//blocked state. Now student1 comes and he will ask for res3 but that is already locked by student2 so he also will go to blcoked state. Now both will be in blocked state and
+//this is called 'Dead lock'
+class Library1 implements Runnable{
+	String res1=new String("Java book");
+	String res2=new String("DSA");
+	String res3=new String("Springboot");
+	public void run() {
+		
+		String tname=Thread.currentThread().getName();
+		if("student1".equals(tname)) {
+			try {
+				//If student1 enters the loop he will take some time to search and then apply lock to that book
+				Thread.sleep(3000);
+				synchronized(res1) {
+					System.out.println(" Student 1 has accquired :"+res1);
+					//Again he will search the book
+					Thread.sleep(3000);
+					synchronized(res2) {
+						System.out.println(" Student 1 has accquired :"+res2);
+						Thread.sleep(3000);
+						synchronized(res3) {
+							System.out.println(" Student 1 has accquired :"+res3);
+						}
+					}
+				}
+				
+			}
+			catch(Exception e) {
+				System.out.println("pblm");
+			}
+		}
+		else {
+			try {
+				//If student1 enters the loop he will take some time to search and then apply lock to that book
+				Thread.sleep(3000);
+				synchronized(res3) {
+					System.out.println(" Student 2 has accquired :"+res3);
+					//Again he will search the book
+					Thread.sleep(3000);
+					synchronized(res2) {
+						System.out.println(" Student 2 has accquired :"+res2);
+						Thread.sleep(3000);
+						synchronized(res1) {
+							System.out.println(" Student 2 has accquired :"+res1);
+						}
+					}
+				}
+				
+			}
+			catch(Exception e) {
+				System.out.println("pblm");
+			}
+			
+		}
+		
+	}
+}
+public class Multi12deadlock2 {
+
+	public static void main(String[] args) {
+		Library1 lb=new Library1();
+		Thread t1=new Thread(lb);
+		Thread t2=new Thread(lb);
+		t1.setName("student1");
+		t2.setName("student2");
+		t1.start();
+		t2.start();
+
+	}
+
+}

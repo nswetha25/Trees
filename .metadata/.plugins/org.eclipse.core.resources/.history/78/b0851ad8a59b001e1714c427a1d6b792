@@ -1,0 +1,48 @@
+
+class Producer extends Thread{
+	Queue q;
+	public Producer(Queue y) {
+		q=y;
+		
+	}
+	public void run() {
+		//Lets generate data
+		int i=1;
+		
+		
+	}
+	
+}
+class Consumer extends Thread{
+	Queue q;
+	public Consumer(Queue y) {
+		q=y;
+		
+	}
+	public void run() {
+		
+	}
+	
+}
+class Queue{
+	int x;
+	public void put(int data) {
+		x=data;
+		System.out.println("I hav eput the data in to x :"+x);
+		
+	}
+	
+}
+public class prodconspblm {
+//As I am creating the object of queue class in this main so it is loosely coupled but if I create the object of queue class directly in the producer class then it is tightly coupled
+	public static void main(String[] args) {
+		Producer p=new Producer(q);
+		Consumer c=new Consumer(q);
+		Queue q=new Queue();
+		p.start();
+		c.start();
+		
+
+	}
+
+}

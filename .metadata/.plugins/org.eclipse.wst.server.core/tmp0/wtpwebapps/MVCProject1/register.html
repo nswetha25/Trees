@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjrN5LeLqngQIyoArjh_623MbQhp80wwyUWQ&usqp=CAU'); /* Replace with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the form */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<h1> Registration form </h1>
+<form action="./reg">
+	<table>
+		<tr>
+			<th>Enter your First Name</th>
+			<td>
+			<input type="text" name="firstname"/>
+			</td>
+			
+			
+		</tr>
+		<tr>
+			<th>Enter your LastName</th>
+			<td>
+			<input type="text" name="lastname"/>
+			</td>
+			
+			
+		</tr>
+		<tr>
+			<th>Enter your Country</th>
+			<td>
+			<input type="text" name="country"/>
+			</td>
+			
+			
+		</tr>
+		<tr>
+			<th>Enter your phoneNumber</th>
+			<td>
+			<input type="number" name="phone"/>
+			</td>
+			
+			
+		</tr>
+		<tr>
+			<th>Enter your password</th>
+			<td>
+			<input type="password" name="password"/>
+			</td>
+			
+			
+		</tr>
+		<tr>
+			
+			<td>
+			<input type="submit" name="Register"/>
+			</td>
+			
+			
+		</tr>
+		
+	</table>
+</form>
+</body>
+</html>

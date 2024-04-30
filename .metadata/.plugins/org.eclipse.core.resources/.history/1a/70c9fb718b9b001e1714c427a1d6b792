@@ -1,0 +1,12 @@
+class car implements Runnable{
+	
+	
+}
+public class Multi9 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

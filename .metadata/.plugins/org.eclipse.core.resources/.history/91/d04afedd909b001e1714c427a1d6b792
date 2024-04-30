@@ -1,0 +1,9 @@
+//Generally we should not interrupt a thread but if we want we can only do that if it is in sleep or waiting stage
+public class Multi10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

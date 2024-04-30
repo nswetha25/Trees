@@ -1,0 +1,28 @@
+//Only can insert from front or rear not anywhere in the middle based on index
+package com.telusko.Learning;
+
+import java.util.ArrayDeque;
+
+public class LaunchArraydequeue {
+
+	public static void main(String[] args) {
+		//As Linkedlist is also referring to dequeue so some methods we can find similar in Arraydequeue
+		
+		ArrayDeque ad=new ArrayDeque();
+		
+		//Order of insertion is maintained and duplicates are also allowed
+		
+		ad.add(10);
+		ad.add(20);
+		ad.addFirst(30);
+		System.out.println(ad);
+		
+		ad.add(100);
+		ad.addLast(200);
+		
+		System.out.println(ad);
+		
+
+	}
+
+}

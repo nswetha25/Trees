@@ -1,0 +1,46 @@
+package com.telusko.Learning;
+
+import java.util.*;
+
+public class LaunchAdp {
+
+	public static void main(String[] args) {
+		
+
+		ArrayList al=new ArrayList();
+		al.add(100);
+		al.add(200);
+		al.add(300);
+		al.add(400);
+		al.add(500);
+		
+		System.out.println(al); //Just printing- this is just the collection printing
+		
+		//Every data in the collection  is stored as object and can be used anywhere
+		
+		Object obj1=al.get(3);
+		
+		//If I try to store this in integer it will throw error
+		
+		//Integer in=al.get(2); I am getting an error  I need to cast this object type to Integer 
+		//Because Object is a parent type reference generally we can create reference with parent type for child but for parent we cant create a child type reference
+		//so we  have to downcast it  
+		Integer in = (Integer) al.get(2); //see now it is not throwing any error
+		//This is where you are actually fetching the data
+		
+		//Index based accessing can only be done in ArrayList and LinkedList. we cant use for loop for others
+		for(int i=0;i<al.size() ;i++) {
+			Object objh=al.get(i);
+			System.out.println(objh);
+		}
+		
+		System.out.println("Enhanced for loop");
+		
+		for(Object obj:al) {
+			System.out.println(obj);
+		}
+		 
+		
+	}
+
+}

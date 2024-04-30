@@ -1,0 +1,22 @@
+package com.telusko.Learning;
+
+import java.util.TreeSet;
+
+public class LaunchTreeset {
+
+	public static void main(String[] args) {
+		
+		TreeSet ts=new TreeSet();//Behidn the scenes binary search tree is followed. So we are getting everything in sorted order (Ascending)
+		ts.add(100);
+		ts.add(200);
+		ts.add(50);
+		ts.add(150);
+		ts.add(25);
+		ts.add(75);
+		ts.add(125);
+		
+		System.out.println(ts);
+
+	}
+
+}

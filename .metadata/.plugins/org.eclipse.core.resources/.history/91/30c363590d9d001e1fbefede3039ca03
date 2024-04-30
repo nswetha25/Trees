@@ -1,0 +1,13 @@
+package com.telusko.Learning;
+
+import java.util.TreeSet;
+
+public class LaunchTreeset {
+
+	public static void main(String[] args) {
+		
+		TreeSet ts=new TreeSet();
+
+	}
+
+}

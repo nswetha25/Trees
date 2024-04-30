@@ -1,0 +1,23 @@
+//Lets explore daemon thread
+class wordpad extends Thread{
+	
+	public void run() {
+		
+		
+	}
+	public void typing() {
+		for(int i=0;i<3;i++) {
+			System.out.println("Typing....");
+		}
+		
+	}
+	
+}
+public class Multi13daemon {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
